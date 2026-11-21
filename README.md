@@ -78,7 +78,8 @@ time:
    the correct type, prints it, and returns the number of characters written.
 4. All returned counts are accumulated and the total is returned at the end,
    after `va_end()` has been called.
-**Justification.**
+
+**Justification:**
  
 - A single pass over the format string is simple and runs in linear time.
 - The `format()` keeps each conversion isolated in its own small function, 
@@ -89,9 +90,12 @@ time:
   reproducing the original buffer management.
 - Special cases are handled explicitly: `NULL` strings print `(null)`, `%p`
   with a null pointer prints `(nil)`.
-**Data structures.** No custom data structure is needed: the only state is the
-`va_list` holding the variadic arguments and an integer counter of printed
-characters.
+
+**Data structures.**
+
+- No custom data structure is needed: the only state is the
+ `va_list` holding the variadic arguments and an integer counter of printed
+ characters.
  
 ## Resources
  
