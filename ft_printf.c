@@ -6,7 +6,7 @@
 /*   By: ylaghrib <ylaghrib@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 18:36:18 by ylaghrib          #+#    #+#             */
-/*   Updated: 2026/11/21 12:25:58 by ylaghrib         ###   ########.fr       */
+/*   Updated: 2026/11/21 15:46:01 by ylaghrib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	put_unkown(char c)
 {
-	if (write(1, "%", 1) == -1)
+	if (ft_putchar('%') == -1)
 		return (-1);
-	if (write(1, &c, 1) == -1)
+	if (ft_putchar(c) == -1)
 		return (-1);
 	return (2);
 }
